@@ -1,0 +1,154 @@
+body{
+    background-color: brown;
+}
+h1{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: white;
+    color: brown;
+    text-align: center;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+tbody tr {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+.form-control {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+#crud-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label{
+    display:block;
+    font-weight: bold;
+    color:brown;
+    font-size: 20px;
+    padding:10px 0;
+}
+::placeholder{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+textarea:focus,
+input:focus{
+    border-color:brown;
+    outline:none;
+    border-width:2px ;
+}
+
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+a{
+    color:BLACK;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left:20px;
+
+}
+.quote-link{
+    text-decoration: none;
+    cursor: pointer;
+    color: black
+}
+#CRUD {
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+#CRUD:hover {
+    background-color: #2980b9;
+}
+
+#access {
+    margin-top: 1rem;
+    padding: 8px 14px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.table_container{
+    max-height: 380px; 
+    overflow-y: auto; 
+    overflow-x: auto;
+    margin-top: 10px;
+}
+.sticky-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.sticky-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+.sticky-table th, .sticky-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#search-form {
+    width:100%;
+    opacity: 0.9;
+}
+#search-form input[type="text"]{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+
+
+
+

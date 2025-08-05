@@ -1,0 +1,13 @@
+{% extends "collector/layout.html" %}
+{% block body %}
+<h1>Add a New Quote</h1>
+<form action="{% url 'add' %}" method="POST" id="crud-form">
+    {% csrf_token %}
+    {{ form }}
+    {% csrf_token %}
+    {{ form }}
+        <button type="submit" id="CRUD">Add Quote</button>
+        
+</form>
+<a href="{% url 'index' %}"><button id="access">Go To Common Place</button></a>
+{% endblock %}

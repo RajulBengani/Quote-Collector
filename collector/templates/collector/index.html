@@ -1,0 +1,58 @@
+{% extends "collector/layout.html" %}
+{% block body %}
+
+<h1>Your Common Place!</h1>
+<!-- Search Form -->
+<form method="get" action="{% url 'index' %}" id="search-form">
+    {% csrf_token %}
+    <input type="text" name="q" placeholder="Search quotes or authors..." value="{{ query|default:'' }}">
+    <button type="submit" id="access">Search</button>
+</form>
+<!-- Displaying Quotes -->
+
+<div class="table_container">
+<table class="sticky-table">
+    <thead>
+        <tr>
+            <th>Quote</th>
+            <th>Author</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for q in quotes %}
+        <tr>
+            <td>{{ q.quote }}</td>
+            <td>{{ q.author }}</td>
+
+            <!-- Update Button -->
+            <td>
+                <a href="{% url 'update' q.id %}">
+                    <button type="button" id="CRUD">Update</button>
+                </a>
+            </td>
+
+            <!-- Delete Button -->
+            <td>
+                <form action="{% url 'delete' q.id %}" method="POST"
+                    onsubmit="return confirm('Are you sure you want to delete this quote?');"
+                    style="display:inline; margin:0; padding:0; background-color: #ddd; box-shadow: none;">
+                    {% csrf_token %}
+                    <button type="submit" id="CRUD">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No quotes yet!</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+<a href="{% url 'add' %}">
+    <button id="access">Add a new quote</button>
+</a>
+
+{% endblock %}
